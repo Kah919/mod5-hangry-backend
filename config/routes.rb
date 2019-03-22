@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create, :index]
       resources :recipes
       resources :ingredients
+      resources :favorites
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end

@@ -8,7 +8,7 @@ class Api::V1::IngredientsController < ApplicationController
     @ingredient = Ingredient.create(ingredient_params)
     render json: @ingredient
   end
-  
+
   private
   def ingredient_params
     params.require(:ingredient).permit(:name)
