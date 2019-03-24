@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :recipes
       resources :ingredients
       resources :favorites
+      resources :categories
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end
