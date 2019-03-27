@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :ingredients
       resources :favorites
       resources :categories
+      resources :follows
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       get "/users/:id/follow", to: "users#follow", as: "follows_with"

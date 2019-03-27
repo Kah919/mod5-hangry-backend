@@ -8,7 +8,7 @@ class Api::V1::FollowsController < ApplicationController
 
   def create
     @follow = Follow.create(follow_params)
-    render json: @follow
+    render json: @follow.followed
   end
 
   def destroy
