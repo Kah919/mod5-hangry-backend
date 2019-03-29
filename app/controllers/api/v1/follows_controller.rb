@@ -8,7 +8,7 @@ class Api::V1::FollowsController < ApplicationController
 
   def create
     @follow = Follow.create(follow_params)
-    render json: @follow.followed
+    render json: {followed: UserSerializer.new(@follow.followed), user: UserSerializer.new(current_user)}
   end
 
   def destroy
